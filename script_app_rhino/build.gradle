@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+
+group "tiiehenry.script.app"
+version "1.2.2"
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        sourceSets.main{
+            resources.srcDirs('src/main/resources')
+        }
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:1.1.0"
+
+    implementation "tiiehenry.script.wrapper:core_library:+"
+    implementation "tiiehenry.script.engines:engine_rhino:+"
+
+    implementation project(':script_app_base')
+}

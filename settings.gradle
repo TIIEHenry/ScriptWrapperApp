@@ -1,0 +1,12 @@
+rootProject.name = "ScriptWrapperApp"
+
+include ":script_app_base",
+        ":script_app_rhino"
+
+includeBuild '../ScriptWrapper'
+includeBuild '../ScriptWrapperCollection'
+
+//rootProject.children.each {
+//    /**设置构建脚本文件名*/
+//    it.buildFileName = "wrapper-app-"+it.name + '.gradle'
+//}
