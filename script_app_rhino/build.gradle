@@ -33,3 +33,5 @@ dependencies {
 
     implementation project(':script_app_base')
 }
+
+apply from: "../properties/maven-publish.gradle"
